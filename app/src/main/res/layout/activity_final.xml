@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".Final">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+android:layout_below="@+id/main_img"
+        android:layout_marginTop="20dp"
+        android:text="Verify &amp; Submit"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:fontFamily="sans-serif" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="401dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/gradient"
+        android:text="SCAN/VERIFY"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/qr_details"
+        android:layout_width="402dp"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="451dp"
+        android:text="QR info"
+        android:textAlignment="center"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/main_img"
+        android:layout_width="70dp"
+        android:layout_height="80dp"
+     android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginRight="182dp"
+        app:srcCompat="@drawable/auth" />
+</RelativeLayout>
