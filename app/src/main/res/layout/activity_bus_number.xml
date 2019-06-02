@@ -3,11 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
-    android:background="@drawable/gradientv"
+    android:background="#FAFAFA"
     android:layout_height="match_parent"
     tools:context=".Bus_number">
-
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:elevation="10dp"
+        android:id="@+id/lowerx"
+        android:layout_marginTop="10dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="3.2px"
+        android:clipToPadding="false"
+        card_view:cardCornerRadius="10dp"
+        android:clipChildren="false"
+        card_view:cardElevation="10dp"
+        card_view:cardPreventCornerOverlap="false"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent">
     <EditText
         android:id="@+id/bus_no"
         android:layout_width="match_parent"
@@ -15,7 +32,7 @@
         android:layout_below="@+id/textViewx"
         android:layout_centerHorizontal="true"
         android:background="@mipmap/shapeit"
-        android:backgroundTint="#FAFAFA"
+        android:backgroundTint="#EEEEEE"
         android:ems="16"
         android:hint="Enter Business Number"
         android:inputType="number"
@@ -52,15 +69,16 @@
         android:id="@+id/textViewx"
         android:layout_width="401dp"
         android:layout_height="29dp"
+        android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="9dp"
-        android:layout_below="@+id/imageView2"
         android:layout_marginRight="9dp"
         android:layout_marginBottom="15dp"
-        android:text="Business Permit Validation"
+        android:text="Enter Business Number"
         android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textColor="@color/text_color"
+        android:textSize="18sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
 </RelativeLayout>

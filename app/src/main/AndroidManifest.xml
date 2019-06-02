@@ -3,9 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.swahilibox.mobile.vision.qrcode">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
@@ -54,7 +58,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Final"
+            android:name=".NewScanner"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashQR"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Bus_number"
@@ -66,17 +75,9 @@
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="barcode" />
 
-        <activity
-            android:name="com.swahilibox.mobile.vision.qrcode.Camera"
-            android:theme="@style/AppTheme.NoActionBar" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCehRe4uvthUKY5A7aeDTWMkpoxIWsnuDo" />
-
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -88,7 +89,9 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".Test" />
+        <activity android:name=".Test"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
     </application>
 
 </manifest>

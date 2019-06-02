@@ -45,7 +45,7 @@ private Button schat;
     ProgressDialog progress;
     TextView tvm;
     final Context context = this;
-
+    GpsTracker gps;
 
     /**
      * Called when the activity is first created.
@@ -62,6 +62,25 @@ private Button schat;
         } catch (Exception e){
             e.printStackTrace();
         }
+
+        gps = new GpsTracker(this);
+
+        // Check if GPS enabled
+        if (gps.canGetLocation()) {
+
+           String lati = String.valueOf(gps.getLatitude());
+            String longi =  String.valueOf(gps.getLongitude());
+
+            // \n is for new line
+         //   Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + lati + "\nLong: " + longi, Toast.LENGTH_LONG).show();
+        }
+        else {
+            // Can't get location.
+            // GPS or network is not enabled.
+            // Ask user to enable GPS/network in settings.
+            gps.showSettingsAlert();
+        }
+
 loader=(RelativeLayout)findViewById(R.id.loader);
         loginDataBaseAdapter=new LoginDataBaseAdapter(this);
         loginDataBaseAdapter=loginDataBaseAdapter.open();

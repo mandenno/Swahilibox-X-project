@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@android:color/white"
     android:padding="15dp"
+    android:background="@drawable/bg_gradient"
     android:layout_height="match_parent"
     tools:context=".Business_Details">
 <ScrollView
@@ -36,8 +36,8 @@
         android:text="This business permit is Invalid"
 
         android:textAlignment="center"
-        android:textColor="@color/red_btn_bg_pressed_color"
-        android:textSize="15dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="17dp"
         android:textStyle="bold" />
 
     <EditText
